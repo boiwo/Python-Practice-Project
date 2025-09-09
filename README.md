@@ -80,11 +80,14 @@ User (1) ------ (∞) Task
 
 
 
-Many-to-Many (Users ↔ Projects)
++---------+         +----------------+         +-----------+
+|  User   | 1     ∞ | UserProjects   | ∞     1 |  Project  |
++---------+---------+----------------+---------+-----------+
+| id (PK) |         | id (PK)        |         | id (PK)   |
+| name    |         | user_id (FK)   |         | title     |
++---------+         | project_id (FK)|         +-----------+
+                    +----------------+
 
-User (∞) <----> (∞) Project 
-
-![alt text](image.png)
 
 
 
